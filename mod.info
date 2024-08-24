@@ -1,0 +1,6 @@
+name=The Alcoholic [ AUTO DRINK ] p_hl
+poster=poster.png
+icon=icon.png
+id=thealcoholic_autodrink_p_hl
+description=Patch to add AutoDrink support for Hard Liquor
+require=thealcoholic_autodrink,hardliquor

@@ -1,0 +1,118 @@
+module TheAlcoholic {
+    imports {
+        HardLiquor
+    }
+
+	item FlaskVodkaFull {
+		DisplayName = Flask of Vodka,
+		DisplayCategory = Food,
+		Type = Food,
+		Packaged = TRUE,
+		Weight = 0.6,
+		Icon = TheAlcoholic_Flask,
+		FoodType = Liquor,
+		AlcoholPower = 5,
+		Alcoholic = TRUE,
+		EatType = Wine,
+		CantBeFrozen = TRUE,
+		ReplaceOnUse = FlaskEmpty,
+		HungerChange = -20,
+		ThirstChange = -20,
+		UnhappyChange = -25,
+		Calories = 1250,
+		Carbohydrates = 0,
+		Lipids = 0,
+		Proteins = 0,
+		CustomContextMenu = Drink,
+		EvolvedRecipe = Beverage:4;Beverage2:4;HotDrink:4;HotDrinkRed:4;HotDrinkWhite:4;HotDrinkSpiffo:4;HotDrinkTea:4,
+		CustomEatSound = DrinkingFromBottleGlass,
+		StaticModel = Flask,
+		WorldStaticModel = FlaskGround,
+		Tags = Liquor;Flask,
+	}
+
+	item FlaskRumFull {
+		DisplayName = Flask of Rum,
+		DisplayCategory = Food,
+		Type = Food,
+		Packaged = TRUE,
+		Weight = 0.6,
+		Icon = TheAlcoholic_Flask,
+		FoodType = Liquor,
+		Alcoholic = TRUE,
+		EatType = Wine,
+		CantBeFrozen = TRUE,
+		ReplaceOnUse = FlaskEmpty,
+		HungerChange = -20,
+		ThirstChange = -30,
+		UnhappyChange = -30,
+		Calories = 1500,
+		Carbohydrates = 0,
+		Lipids = 0,
+		Proteins = 0,
+		CustomContextMenu = Drink,
+		EvolvedRecipe = Beverage:4;Beverage2:4;HotDrink:4;HotDrinkRed:4;HotDrinkWhite:4;HotDrinkSpiffo:4;HotDrinkTea:4,
+		CustomEatSound = DrinkingFromBottleGlass,
+		StaticModel = Flask,
+		WorldStaticModel = FlaskGround,
+		Tags = Liquor;Flask,
+	}
+
+	item FlaskTequilaFull {
+		DisplayName = Flask of Tequila,
+		DisplayCategory = Food,
+		Type = Food,
+		Packaged = TRUE,
+		Weight = 0.6,
+		Icon = TheAlcoholic_Flask,
+		FoodType = Liquor,
+		Alcoholic = TRUE,
+		EatType = Wine,
+		CantBeFrozen = TRUE,
+		ReplaceOnUse = FlaskEmpty,
+		HungerChange = -20,
+		ThirstChange = -30,
+		UnhappyChange = -35,
+		Calories = 1600,
+		Carbohydrates = 0,
+		Lipids = 0,
+		Proteins = 0,
+		CustomContextMenu = Drink,
+		EvolvedRecipe = Beverage:4;Beverage2:4;HotDrink:4;HotDrinkRed:4;HotDrinkWhite:4;HotDrinkSpiffo:4;HotDrinkTea:4,
+		CustomEatSound = DrinkingFromBottleGlass,
+		StaticModel = Flask,
+		WorldStaticModel = FlaskGround,
+		Tags = Liquor;Flask,
+	}
+
+
+    recipe Fill Flask {
+		FlaskEmpty,
+		VodkaFull,
+        
+		Result:FlaskVodkaFull,
+		Time:100.0,
+		Category:TheAlcoholic,
+        OnCreate:TheAlcoholic.AutoDrink.onCreateFlaskVodka,
+	}
+
+    recipe Fill Flask {
+		FlaskEmpty,
+		RumFull,
+        
+		Result:FlaskRumFull,
+		Time:100.0,
+		Category:TheAlcoholic,
+        OnCreate:TheAlcoholic.AutoDrink.onCreateFlaskRum,
+	}
+	
+    recipe Fill Flask {
+		FlaskEmpty,
+		TequilaFull,
+        
+		Result:FlaskTequilaFull,
+		Time:100.0,
+		Category:TheAlcoholic,
+        OnCreate:TheAlcoholic.AutoDrink.onCreateFlaskTequila,
+	}
+}
